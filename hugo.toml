@@ -1,0 +1,30 @@
+baseURL = 'https://fourthspace.nyc/'
+title = 'Fourth Space NYC'
+locale = 'en-us'
+
+
+# Core Parameters used by the smol theme templates
+[params]
+subtitle = "Free and cheap NYC events for techy creatives and artists."
+dateFmt = "Jan 2, 2006"
+copyright = "Fourth Space NYC"
+
+# Top Navigation Header Menu Configuration
+[menu]
+[[menu.main]]
+identifier = "issues"
+name = "Weekly Issues"
+url = "/posts/"
+weight = 1
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+# Optional Footer Menu Configuration
+[[menu.footer]]
+name = "RSS Feed"
+url = "/index.xml"
+weight = 1

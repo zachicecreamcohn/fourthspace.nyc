@@ -1,8 +1,12 @@
 <header>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-	== <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
-	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+    <div>
+      <strong>+{{ strings.Repeat ( .Site.Title | len | add 2 ) "-" }}+</strong><br>
+      <strong>|&nbsp;</strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a><strong>&nbsp;|</strong><br>
+      <strong>+{{ strings.Repeat ( .Site.Title | len | add 2 ) "-" }}+</strong>
+    </div>
+    <div class="header-subtitle">{{ .Site.Params.subtitle }}</div>
+  </div>
 	<p>
 	<nav>
 			<a href="/"><b>Start</b></a>.
