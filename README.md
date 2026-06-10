@@ -1,92 +1,49 @@
-# smol
+# Fourth Space NYC
 
-A minimal, monospaced blogging theme for Hugo that respects your privacy and is easy on your bandwidth. A demo can be found at https://smol-demo.morph.sh.
+A curated weekly guide to free and cheap NYC events for techy creatives and artists — built with Hugo and the [smol](https://github.com/colorchestra/smol) theme.
 
-smol is based on [Blank](https://github.com/Vimux/Blank) created by [Vimux](https://github.com/Vimux).
+> "One of the best parts of this city is that, although the rent is high, there are practically infinite free (or very cheap) activities and events for every niche."
 
+## About
 
-![Screenshot](/images/tn.png)
+Fourth Space NYC is a personal project by Zach, a software engineer and lighting/video designer for theatre. The goal is a curated list of activities and events for geeky people who find joy at the intersection of arts and technology.
 
-## Features
+The site is deployed to [fourthspace.nyc](https://fourthspace.nyc) via GitHub Actions → GitHub Pages.
 
-- No JavaScript
-- No Google spyware or tracking of any kind
-- No other external dependencies, embedded fonts or comment sections
-- Dark mode support (depending on your OS's setting)
+## Stack
 
-## Installation
+- [Hugo](https://gohugo.io/) static site generator
+- [smol](https://github.com/colorchestra/smol) theme (monospaced, no JS, no trackers)
+- GitHub Actions for CI/CD
 
-In your Hugo site `themes` directory, run:
+## Development
 
-```
-git clone https://github.com/colorchestra/smol
-```
-
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `smol`.
-
-```
-theme = "smol"
+```bash
+hugo server
 ```
 
-Lastly, add the following lines to your `config.toml` to set site parameters and make use of all the menu entries in the header and footer sections if you need them.
+The site will be available at `http://localhost:1313`.
 
-```
-# Parameters
+## Deployment
+
+Pushes to `main` automatically build and deploy via `.github/workflows/deploy.yml`.
+
+In your GitHub repo settings, go to **Settings → Pages → Source** and set it to **GitHub Actions**.
+
+## Config
+
+Key settings in `hugo.toml`:
+
+```toml
+baseURL = 'https://fourthspace.nyc/'
+title = 'Fourth Space NYC'
+
 [params]
-    subtitle = "Your blog subtitle goes here!"
-    dateFmt = "02.01.2006 15:04"
-
-# Header
-[menu]
-  [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 1 
-
-  [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2 
-
-  [[menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 3
-
-# Footer
-  [[menu.footer]]
-        name = "Github"
-        url = "https://github.com/example"
-        weight = 1 
-
-    [[menu.footer]]
-        name = "Mastodon"
-        url = "https://example.com/@user"
-        weight = 2 
-
-    [[menu.footer]]
-        name = "Imprint"
-        url = "/imprint"
-        weight = 3 
-
+subtitle = "Free and cheap NYC events for techy creatives and artists."
+dateFmt = "Jan 2, 2006"
+copyright = "Fourth Space NYC"
 ```
-
-For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
-
-## Optional features
-### Custom copyright text
-Add `copyright = "Your text here"` - in the config.toml to change the copyright notice in the footer.
-
-### Image captions
-You can add captions to images (technically using `<figcaption>` HTML tags) by adding titles, like so: `![Alt text here](/path/to/image.png "Put your caption here!")`
-
-## Contributing
-
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/colorchestra/smol/issues) to let me know. Or make directly a [pull request](https://github.com/colorchestra/smol/pulls).
 
 ## License
 
-This theme is released under the [MIT license](https://github.com/colorchestra/smol/blob/master/LICENSE).
+Content © Fourth Space NYC. Theme ([smol](https://github.com/colorchestra/smol)) released under the [MIT license](https://github.com/colorchestra/smol/blob/master/LICENSE).
