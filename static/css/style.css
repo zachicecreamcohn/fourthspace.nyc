@@ -22,7 +22,7 @@ p > code{color: var(--precolor); background: var(--prebgcolor); padding:2px}
 code{color: var(--precolor); background: var(--prebgcolor); padding:2px}
 pre{color: var(--precolor); background: var(--prebgcolor); padding:24px; overflow-x: auto}
 .post-header-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
-.mta-badge{display:inline-flex;align-items:center;justify-content:center;width:1.5rem;height:1.5rem;border-radius:50%;font-size:0.85rem;font-weight:700;color:#fff;margin:0 2px;vertical-align:middle;font-family:helvetica,arial,sans-serif}
+.mta-badge{display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;font-size:0.85rem;font-weight:700;color:#fff;margin:0 2px;vertical-align:middle;font-family:helvetica,arial,sans-serif}
 .mta-1,.mta-2,.mta-3{background:#EE352E}
 .mta-4,.mta-5,.mta-6{background:#00933C}
 .mta-7{background:#B933AD}
@@ -33,6 +33,12 @@ pre{color: var(--precolor); background: var(--prebgcolor); padding:24px; overflo
 .mta-L{background:#A7A9AC}
 .mta-N,.mta-Q,.mta-R,.mta-W{background:#FCCC0A;color:#000}
 .mta-S{background:#808183}
+.event{margin:0.75rem 0}
+.event small{color:#888}
+.event-free{background:#00933C;color:#fff;font-weight:700;padding:0 0.3rem;border-radius:3px;font-size:0.75rem}
+.event-pwyc{background:#0039A6;color:#fff;font-weight:700;padding:0 0.3rem;border-radius:3px;font-size:0.75rem}
+.event-head{display:flex;justify-content:space-between;align-items:center;gap:0.5rem}
+.event-head .mta-trains{flex-shrink:0}
 article{padding:24px 0}
 .center {display: block;margin-left: auto;margin-right: auto;width: 100%;}
 figcaption {color: #888; font: 12px/1.5 monospace; text-align: center;}
