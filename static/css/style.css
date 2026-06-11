@@ -1,18 +1,18 @@
 html {overflow-y: scroll}
 :root {
-  --bgcolor: white;
-  --fontcolor: #444;
-  --linkcolor: #2e5a3c;
-  --visitedcolor: #667a52;
+  --bgcolor: #ffffff;
+  --fontcolor: #111111;
+  --linkcolor: #0a3d8f;
+  --visitedcolor: #3a5a8a;
   --precolor: #fff;
   --prebgcolor: #000;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bgcolor: #181a18;
-    --fontcolor: #e2e4e1;
-    --linkcolor: #92b792;
-    --visitedcolor: #5b785b;
+    --bgcolor: #0f0f0f;
+    --fontcolor: #f0f0f0;
+    --linkcolor: #7ab0e8;
+    --visitedcolor: #a0b8d8;
     --precolor: #f0f0f0;
     --prebgcolor: #232623;
   }
