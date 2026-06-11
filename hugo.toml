@@ -5,7 +5,7 @@ locale = 'en-us'
 
 # Core Parameters used by the smol theme templates
 [params]
-subtitle = "Free and cheap NYC events for techy creatives and artists."
+subtitle = "Free and cheap events for artists and tinkerers"
 dateFmt = "Jan 2, 2006"
 copyright = "Fourth Space NYC"
 
