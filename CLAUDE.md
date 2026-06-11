@@ -9,6 +9,16 @@ A Hugo static site for weekly curated NYC events for techy creatives and artists
 - Font: Mozilla Text (Google Fonts)
 - Deployed via `.github/workflows/deploy.yml` → GitHub Pages
 
+## Commands
+
+```bash
+# Start dev server
+hugo server
+
+# Create a new post
+hugo new content posts/2026-06-13.md
+```
+
 ## Content
 
 Posts live in `content/posts/` named by date (e.g. `2026-06-10.md`).
