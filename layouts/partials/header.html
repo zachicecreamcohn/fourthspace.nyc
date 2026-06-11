@@ -1,9 +1,7 @@
 <header>
   <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
     <div>
-      <strong>+{{ strings.Repeat ( .Site.Title | len | add 2 ) "-" }}+</strong><br>
-      <strong>|&nbsp;</strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a><strong>&nbsp;|</strong><br>
-      <strong>+{{ strings.Repeat ( .Site.Title | len | add 2 ) "-" }}+</strong>
+      <a style="text-decoration: none;" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a><br>
     </div>
     <div class="header-subtitle">{{ .Site.Params.subtitle }}</div>
   </div>
