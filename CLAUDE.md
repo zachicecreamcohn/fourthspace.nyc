@@ -65,6 +65,35 @@ Supported lines: `1 2 3 4 5 6 7 A B C D E F G J L M N Q R S W Z`
 
 Badge colors match official MTA colors. The `N Q R W` badges use black text (yellow background).
 
+Badge rendering lives in the `layouts/partials/trains.html` partial. Both the `trains` shortcode and the `event` shortcode call it, so it's the single source of truth.
+
+### Event listings (`{{< event >}}` shortcode)
+
+Use the `event` shortcode to render a single event card. Events are grouped under `##` day-of-week headings within a post. Separate adjacent events with a blank line.
+
+```markdown
+{{< event
+  title="Rouge Salon: Absurd True Tales"
+  price="$24 ($25 at the door)"
+  org="Caveat"
+  trains="F J M Z"
+  free="true"
+  url="https://www.caveat.nyc/events/..."
+>}}
+Description in markdown (rendered as the card body).
+{{< /event >}}
+```
+
+Params:
+- `title` — event name (required)
+- `price` — cost text
+- `org` — hosting venue/organization (short, e.g. "Caveat")
+- `trains` — space-separated MTA lines; rendered as badges pushed to the right of the title
+- `url` — optional; links the title
+- `free` — optional boolean (`"true"`); prefixes the price with a green `FREE` badge
+
+Do not include a full address — just the `org` plus nearby `trains` (look up the nearest station for the venue).
+
 ## Layout files
 
 - `layouts/partials/header.html` — site header with nameplate + subtitle
@@ -72,6 +101,8 @@ Badge colors match official MTA colors. The `N Q R W` badges use black text (yel
 - `layouts/_default/summary.html` — post preview card
 - `layouts/_default/list.html` — post list (index, tags, etc.)
 - `layouts/shortcodes/trains.html` — MTA badge shortcode
+- `layouts/shortcodes/event.html` — event card shortcode
+- `layouts/partials/trains.html` — shared MTA badge rendering (used by both shortcodes)
 
 ## Styles
 

@@ -1,0 +1,9 @@
+{{- $url := .Get "url" -}}
+<div class="event">
+  <div class="event-head">
+    <strong>{{ if $url }}<a href="{{ $url }}" data-umami-event="event-click" data-umami-event-title="{{ .Get "title" }}" data-umami-event-org="{{ .Get "org" }}">{{ .Get "title" }}</a>{{ else }}{{ .Get "title" }}{{ end }}</strong>
+    {{ with .Get "trains" }}{{ partial "trains.html" (split . " ") }}{{ end }}
+  </div>
+  <small>{{ if eq (.Get "free") "true" }}<span class="event-free">FREE</span> {{ end }}{{ if eq (.Get "pwyc") "true" }}<span class="event-pwyc">PAY WHAT YOU CAN</span> {{ end }}{{ .Get "price" }} · {{ .Get "org" }}</small>
+  {{ with .Inner }}<div>{{ . | $.Page.RenderString }}</div>{{ end }}
+</div>

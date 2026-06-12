@@ -1,1 +1,1 @@
-<span class="mta-trains">{{ range .Params }}<span class="mta-badge mta-{{ . | upper }}">{{ . | upper }}</span>{{ end }}</span>
+{{- partial "trains.html" .Params -}}
