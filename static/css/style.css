@@ -41,6 +41,9 @@ pre{color: var(--precolor); background: var(--prebgcolor); padding:24px; overflo
 .event-head .mta-trains{flex-shrink:0}
 .event-head-right{display:flex;align-items:center;gap:0.5rem;flex-shrink:0}
 .event-location{color:#888;font-size:0.8em;font-family:inherit}
+blockquote{margin:1rem 0;padding:0.25rem 0 0.25rem 1rem;border-left:3px solid var(--linkcolor);color:var(--fontcolor)}
+.nameplate,a.nameplate:link,a.nameplate:visited{text-decoration:none;background:var(--fontcolor);color:var(--bgcolor);padding:0.15em 0.4em;font-weight:700;display:inline-block;line-height:1.1}
+.nameplate-inline{font-size:0.85em;padding:0.05em 0.3em;vertical-align:baseline}
 article{padding:24px 0}
 .center {display: block;margin-left: auto;margin-right: auto;width: 100%;}
 figcaption {color: #888; font: 12px/1.5 monospace; text-align: center;}
