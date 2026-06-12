@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # 11am ET (15:00 UTC during EDT) — rebuild to include posts meant to be posted today
+    - cron: '0 15 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: read
